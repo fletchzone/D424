@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.Views.TermConstructPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label 
+                    Text="Term" 
+                    Style="{StaticResource modalTitle}"
+                 />
+            </StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Entry Placeholder="Term Title" x:Name="termTitle"/>
+                <Label Text="Start Date"/>
+                <DatePicker x:Name="startDateSelected"/>
+                <Label Text="End Date"/>
+                <DatePicker x:Name="endDateSelected"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Button 
+                    x:Name="SaveButton" 
+                    Style="{StaticResource regularButton}"
+                    Text="Save" 
+                    Clicked="SaveButton_Clicked"
+                />
+                <Button 
+                    x:Name="SaveEditButton" 
+                    Style="{StaticResource regularButton}"
+                    Text="Save" 
+                    Clicked="SaveEditButton_Clicked"
+                />
+                <Button Text="Cancel" Clicked="CancelButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
